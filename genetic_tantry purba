@@ -1,0 +1,55 @@
+public class Generic<T> {
+    private T name;
+    private T address;
+    private T phoneNumber;
+    private T gender;
+
+    public Generic() {}
+
+    public Generic(T name, T address, T phoneNumber, T gender) {
+        this.name = name;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.gender = gender;
+    }
+
+    public T getName() {
+        return name;
+    }
+
+    public void setName(T name) {
+        this.name = name;
+    }
+
+    public T getAddress() {
+        return address;
+    }
+
+    public void setAddress(T address) {
+        this.address = address;
+    }
+
+    public T getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(T phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public T getGender() {
+        return gender;
+    }
+
+    public void setGender(T gender) {
+        this.gender = gender;
+    }
+
+    public static void main(String[] args) {
+        Generic<String> person = new Generic<>("John Doe", "123 Main St", "555-1234", "Male");
+        System.out.println("Name: " + person.getName());
+        System.out.println("Address: " + person.getAddress());
+        System.out.println("Phone Number: " + person.getPhoneNumber());
+        System.out.println("Gender: " + person.getGender());
+    }
+}
